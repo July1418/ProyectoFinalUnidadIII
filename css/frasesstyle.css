@@ -1,0 +1,148 @@
+/*====================*/
+/* BODY Y FUENTES */
+/*====================*/
+body {
+  background-color: #cceeff;
+  color: #333333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+.titulo-mural {
+  text-align: center;
+  font-size: 3.5rem;  /* antes 2.5rem, ahora más grande */
+  font-weight: bold;
+  color: #4a148c;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  margin-top: 60px;   /* antes 20px, ahora más abajo */
+  margin-bottom: 30px;
+  font-family: 'Comic Sans MS', 'Segoe UI', cursive; /* toque alegre */
+}
+.mural {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 900px; /* más espacio para colocar notas */
+}
+/* 🎭 Video con telón - versión responsive */
+.video-frame {
+  position: relative;
+  width: 80%;           /* ancho relativo para que se adapte */
+  max-width: 800px;     /* ancho máximo */
+  margin: 0 auto;
+  padding-bottom: 56.25%; /* proporción 16:9 */
+  height: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.video-frame iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  z-index: 1;
+}
+
+/* 🎭 Telón más delgado */
+.curtain {
+  position: absolute;
+  top: 0;
+  height: 100%;          
+  width: 40px;           /* antes 60px, ahora más delgado */
+  background: linear-gradient(to bottom, #d32f2f, #b71c1c);
+  z-index: 2;
+}
+
+.curtain-left  { left: 0; border-right: 2px solid #880e4f; }
+.curtain-right { right: 0; border-left: 2px solid #880e4f; }
+
+/* 🎨 Notas */
+.notes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px; /* 🔥 Aumenta el espacio entre notas */
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.note {
+  width: 200px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  transform: rotate(-2deg);
+  position: relative;
+
+}
+
+.note:hover {
+  transform: scale(1.1) rotate(0deg);
+}
+
+/* 🎨 Notas */
+/* 🎨 Notas */
+.note { 
+  padding: 15px;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 2px 4px 6px rgba(0,0,0,0.3);
+  font-style: italic;
+  font-size: 14px;
+  position: absolute;
+  transition: transform 0.3s ease;
+  color: #333;
+  z-index: 3; /* ✅ Encima del video */
+}
+
+.note:hover {
+  transform: scale(1.1) rotate(0deg);
+}
+
+/* ✅ Notas alrededor en círculo (más aire separadas) */
+.note1  { background: #fff9c4;  top: 2%;  left: 2%; transform: rotate(-6deg); }
+.note2  { background: #c8e6c9;  top: 8%; left: 83%; transform: rotate(4deg); }
+.note3  { background: #bbdefb;  top: 32%; left: 85%; transform: rotate(7deg); }
+.note4  { background: #f8bbd0;  top: 60%; left: 82%; transform: rotate(-5deg); }
+.note5  { background: #d1c4e9;  top: 92%; left: 62%; transform: rotate(3deg); }
+.note6  { background: #ffe0b2;  top: 92%; left: 42%; transform: rotate(-4deg); }
+.note7  { background: #c5cae9;  top: 92%; left: 20%; transform: rotate(-7deg); }
+.note8  { background: #ffccbc;  top: 65%; left: 1%;  transform: rotate(5deg); }
+.note9  { background: #e1bee7;  top: 32%; left: 0%;  transform: rotate(-3deg); }
+
+
+
+/*====================*/
+/* FOOTER */
+/*====================*/
+footer {
+  background-color: #000000;
+  color: #00bcd4;
+  padding: 30px 0;
+  font-size: 18px;
+}
+
+footer h5 {
+  color: #00bcd4;
+  margin-bottom: 15px;
+}
+
+footer a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}

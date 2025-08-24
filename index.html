@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - Proyecto Final</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- CSS Personalizado -->
+  <link rel="stylesheet" href="css/iniciostyle.css">
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <span class="navbar-brand">TU VOZ IMPORTA 💕</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="pagina.html">Mensajes</a></li>
+        <li class="nav-item"><a class="nav-link" href="frases.html">Motivación</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Carrusel -->
+  <div id="carouselFrases" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <!-- Imagen de bienvenida -->
+      <div class="carousel-item active">
+        <img src="imagenes/bienvenida.png" class="d-block w-100" alt="Bienvenida">
+        <div class="carousel-caption d-none d-md-block">
+          <p>BIENVENID@</p>
+          <h5>"💗 A Tu Voz Importa 💗"</h5>
+        </div>
+      </div>
+
+      <!-- Frases motivacionales -->
+      <div class="carousel-item">
+        <img src="imagenes/imagen1.jpg" class="d-block w-100" alt="Frase 1">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>"No estás solo(a), tu voz merece ser escuchada."</h5>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="imagenes/imagen2.jpg" class="d-block w-100" alt="Frase 2">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>"Cada emoción es válida, cada sentir importa."</h5>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="imagenes/imagen3.jpg" class="d-block w-100" alt="Frase 3">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>"Un día a la vez, un paso a la vez... y aquí seguimos."</h5>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="imagenes/imagen4.jpg" class="d-block w-100" alt="Frase 4">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>"Hablar también es sanar 💗."</h5>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="imagenes/imagen5.jpg" class="d-block w-100" alt="Frase 5">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>"Eres más fuerte de lo que crees, más valiente de lo que imaginas."</h5>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="imagenes/imagen6.jpg" class="d-block w-100" alt="Frase 6">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>"En medio del ruido, tu paz también es prioridad."</h5>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="imagenes/imagen7.jpg" class="d-block w-100" alt="Frase 7">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>"Respira... lo estás haciendo bien, y estoy contigo."</h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselFrases" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselFrases" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+
+  <!-- Sección 1: Video y texto -->
+  <section class="container my-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="ratio ratio-16x9">
+          <video controls>
+            <source src="videos/TUVOZIMPORTA.mp4" type="video/mp4" />
+            Tu navegador no soporta el video.
+          </video>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h2>¿Por qué es importante compartir lo que sentimos?</h2>
+        <p>Expresar lo que sentimos puede ayudarnos a liberar emociones, encontrar comprensión y recibir apoyo de personas que, como tú, están atravesando momentos difíciles.</p>
+        <ul>
+          <li>Mejora la salud mental</li>
+          <li>Fomenta la empatía</li>
+          <li>Nos hace sentir menos solos</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulario -->
+  <section class="expresate py-5 bg-light text-center">
+    <div class="container">
+      <h2 class="mb-4">Tu voz importa</h2>
+      <p class="mb-4">Comparte cómo te sientes de forma anónima. Usa un alias si deseas que te reconozcamos sin revelar tu identidad.</p>
+
+      <form id="formMensaje">
+        <div class="mb-3">
+          <input type="text" class="form-control" id="alias" placeholder="Alias (opcional)">
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe aquí de forma anónima..."></textarea>
+        </div>
+        <div class="mb-3">
+          <select class="form-select" id="categoria">
+            <option selected disabled>Selecciona una categoría</option>
+            <option value="Ansiedad">Ansiedad</option>
+            <option value="Tristeza">Tristeza</option>
+            <option value="Felicidad">Felicidad</option>
+            <option value="Soledad">Soledad</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Sección 2 -->
+  <section class="container mt-4">
+    <h2 class="text-center">Recibe mensajes positivos</h2>
+    <p class="text-center">Otros usuarios te pueden dejar mensajes de ánimo.</p>
+  </section>
+
+  <!-- Sección 3 -->
+  <section class="container mt-4 mb-5">
+    <h2 class="text-center">Espacio seguro</h2>
+    <p class="text-center">Este sitio bloquea automáticamente cualquier contenido ofensivo.</p>
+  </section>
+
+  <!-- Sección del botón a página de mensajes -->
+  <section class="container text-center my-5">
+    <h2>💌 Lee y responde mensajes de la comunidad 💌</h2>
+    <p>Haz clic en el botón para navegar a la página donde podrás ver y responder los mensajes.</p>
+    <a href="pagina.html" class="btn btn-primary btn-lg">Ir a Mensajes</a>
+  </section>
+  <!-- Sección de Motivación -->
+  <section class="container text-center my-5">
+    <h2>💡 Inspírate y motívate 💡</h2>
+    <p>Descubre frases motivadoras de autores famosos y reflexiona sobre tu crecimiento personal.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white mt-5 p-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 text-center text-md-start">
+        <h5>Creador por:</h5>
+        <p>Erika Julieth Castillo Duque</p>
+      </div>
+      <div class="col-md-4 text-center text-md-start">
+        <h5>Redes Sociales</h5>
+        <ul class="list-unstyled">
+          <li><i class="bi bi-facebook"></i> Facebook</li>
+          <li><i class="bi bi-twitter"></i> Twitter</li>
+          <li><i class="bi bi-instagram"></i> Instagram</li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-center text-md-start">
+        <h5>Otros Enlaces</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white">Contacto</a></li>
+          <li><a href="#" class="text-white">Términos</a></li>
+          <li><a href="#" class="text-white">Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- Bootstrap JS -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script>
+  const form = document.getElementById('formMensaje');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const alias = document.getElementById('alias').value.trim() || 'Anonimo';
+    const mensaje = document.getElementById('mensaje').value.trim();
+    const categoria = document.getElementById('categoria').value;
+
+    if (!mensaje || categoria === "Selecciona una categoría") {
+      alert("Por favor completa el mensaje y la categoría.");
+      return;
+    }
+
+    // Traer mensajes existentes o crear array vacío
+    let mensajes = JSON.parse(localStorage.getItem('mensajes')) || [];
+
+    // Agregar mensaje nuevo
+    mensajes.push({
+      alias,
+      mensaje,
+      categoria,
+      fecha: new Date().toLocaleString()
+    });
+
+    // Guardar de nuevo
+    localStorage.setItem('mensajes', JSON.stringify(mensajes));
+
+    // Limpiar formulario
+    document.getElementById('alias').value = '';
+    document.getElementById('mensaje').value = '';
+    document.getElementById('categoria').selectedIndex = 0;
+
+    alert("Mensaje enviado correctamente 💖");
+  });
+</script>
+</body>
+</html>

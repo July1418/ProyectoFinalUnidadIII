@@ -1,0 +1,193 @@
+/*====================*/
+/* ESTILOS GENERALES */
+/*====================*/
+body {
+  background-color: #cceeff; /* Azul celeste uniforme */
+  color: #333333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  color: #0077b6;
+  font-style: italic; /* Solo títulos en cursiva */
+}
+
+.navbar-brand.no-pointer {
+  cursor: default;
+  pointer-events: none;
+}
+
+/*====================*/
+/* FOOTER */
+/*====================*/
+footer {
+  background-color: #000000;
+  color: #00bcd4;
+  padding: 30px 0;
+  font-size: 18px;
+}
+
+footer h5 {
+  color: #00bcd4;
+  margin-bottom: 15px;
+}
+
+footer a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+/*====================*/
+/* MENSAJES Y RESPUESTAS */
+/*====================*/
+.mensaje-principal {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  border-left: 6px solid #42a5f5;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-style: italic;
+}
+
+.respuestas {
+  margin-left: 20px;
+}
+
+.respuestas .card {
+  background-color: #fff8e1;
+  border-left: 6px solid #ffb300;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  font-style: italic;
+}
+
+.destello {
+  animation: destelloAnim 0.5s ease-in-out;
+}
+
+@keyframes destelloAnim {
+  0% { box-shadow: 0 0 0 rgba(255, 193, 7, 0); }
+  50% { box-shadow: 0 0 15px rgba(255, 193, 7, 0.7); }
+  100% { box-shadow: 0 0 0 rgba(255, 193, 7, 0); }
+}
+
+/* Animaciones de aparición */
+@keyframes aparecer-mensaje {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes aparecer-respuesta {
+  0% { transform: translateY(10px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/*====================*/
+/* CARRUSEL */
+/*====================*/
+.carrusel-fondo {
+  background-color: black;
+  width: 100%;
+  padding: 40px 0;
+  position: relative;
+}
+
+.carousel {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: contain; /* Mantener proporción y evitar saltos */
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px;
+  background-color: #000;
+}
+
+.carousel-caption {
+  position: static; /* Carrusel original, texto debajo de imagen */
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 100% 100%;
+}
+
+/* Estilo para el texto debajo de las imágenes */
+.texto-carrusel {
+  background-color: rgba(0, 123, 255, 0.2);
+  color: white;
+  font-weight: bold;
+  border: 2px solid #00bcd4;
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 90%;
+  margin: 20px auto 0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  box-shadow: 0 4px 10px rgba(0,188,212,0.4);
+}
+
+video {
+  border: 3px solid #0077b6;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,119,182,0.4);
+}
+
+form {
+  background-color: #f0faff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 1px solid #00bcd4;
+}
+
+.btn-primary {
+  background-color: #0077b6;
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  cursor: pointer; /* agregado */
+}
+
+.btn-primary:hover {
+  background-color: #005f87;
+}

@@ -1,7 +1,29 @@
 // ===============================
+// Lista de palabras ofensivas
+// ===============================
+const palabrasOfensivas = ["boba", "idiota", "pendejo", "pendeja", "estupido", "estupida", "perra", "perro"];
+
+// Validar si un texto contiene palabras ofensivas (usando regex para detectar palabras completas)
+function validarRespuesta(texto) {
+  const textoMinusculas = texto.toLowerCase();
+  for (let palabra of palabrasOfensivas) {
+    const regex = new RegExp("\\b" + palabra.toLowerCase() + "\\b", "i");
+    if (regex.test(textoMinusculas)) {
+      return false; // contiene palabra ofensiva
+    }
+  }
+  return true; // está limpia
+}
+
+// ===============================
 // Guardar un nuevo mensaje
 // ===============================
 function guardarMensaje(alias, categoria, mensaje) {
+  if (!validarRespuesta(mensaje)) {
+    alert("🚫 Tu mensaje contiene palabras ofensivas y no puede ser enviado.");
+    return;
+  }
+
   const mensajes = JSON.parse(localStorage.getItem("mensajes")) || [];
   const nuevo = {
     alias,
@@ -92,6 +114,12 @@ function responder(index) {
 
   if (alias === "" || texto === "") return;
 
+  // Validación de palabras ofensivas
+  if (!validarRespuesta(texto)) {
+    alert("🚫 Tu respuesta contiene palabras ofensivas y no puede ser enviada.");
+    return;
+  }
+
   const mensajes = JSON.parse(localStorage.getItem("mensajes")) || [];
   const respuesta = {
     alias,
@@ -119,6 +147,10 @@ function editarMensaje(index) {
   const nuevoTexto = prompt("Edita tu mensaje:", mensajes[index].mensaje);
 
   if (nuevoTexto !== null && nuevoTexto.trim() !== "") {
+    if (!validarRespuesta(nuevoTexto)) {
+      alert("🚫 Tu mensaje editado contiene palabras ofensivas y no puede ser guardado.");
+      return;
+    }
     mensajes[index].mensaje = nuevoTexto;
     mensajes[index].fecha = new Date().toLocaleString();
     localStorage.setItem("mensajes", JSON.stringify(mensajes));
@@ -147,6 +179,10 @@ function editarRespuesta(msgIndex, respIndex) {
   );
 
   if (nuevaRespuesta !== null && nuevaRespuesta.trim() !== "") {
+    if (!validarRespuesta(nuevaRespuesta)) {
+      alert("🚫 Tu respuesta editada contiene palabras ofensivas y no puede ser guardada.");
+      return;
+    }
     mensajes[msgIndex].respuestas[respIndex].texto = nuevaRespuesta;
     mensajes[msgIndex].respuestas[respIndex].fecha =
       new Date().toLocaleString();
